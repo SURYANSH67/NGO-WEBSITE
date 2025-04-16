@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Helping Hands NGO</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Helping Hands</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#why">Why Donate?</a>
+        <a href="#impact">Impact</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="auth-buttons">
+        <span id="userWelcome"></span>
+        <button id="loginBtn" onclick="toggleModal('loginModal')">Login</button>
+        <button id="registerBtn" onclick="toggleModal('registerModal')">Register</button>
+        <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+        <button onclick="attemptDonation()">Donate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Empowering Lives. Making a Difference.</h2>
+      <p>Join us in our mission to help the underprivileged.</p>
+      <button onclick="attemptDonation()">Donate Now</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2>About Us</h2>
+    <p>Helping Hands is a non-profit organization working in education, health, and women empowerment sectors in rural India.</p>
+  </section>
+
+  <!-- Why Donate -->
+  <section id="why" class="section container highlight">
+    <h2>Why Donate?</h2>
+    <p>Your contribution helps provide education, healthcare, and sustenance to those in need. Every rupee matters.</p>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="section container stats">
+    <h2>Our Impact</h2>
+    <div class="stats-box">
+      <div><h3>₹12,50,000+</h3><p>Funds Raised</p></div>
+      <div><h3>2,000+</h3><p>Children Educated</p></div>
+      <div><h3>1,000+</h3><p>Families Helped</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section container">
+    <h2>What People Say</h2>
+    <div class="testimonials">
+      <blockquote>
+        <p>“Helping Hands changed my life. I now go to school every day!”</p>
+        <footer>— Anjali, 10 yrs old</footer>
+      </blockquote>
+      <blockquote>
+        <p>“Transparent and trustworthy NGO. Proud to donate here.”</p>
+        <footer>— Ramesh Kumar, Donor</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formResponse"></p>
+  </section>
+
+  <!-- Modals -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form onsubmit="login(event)">
+        <input type="text" id="loginUsername" placeholder="Username" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginResponse"></p>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('registerModal')">&times;</span>
+      <h2>Register</h2>
+      <form onsubmit="register(event)">
+        <input type="text" id="registerUsername" placeholder="Username" required />
+        <input type="password" id="registerPassword" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerResponse"></p>
+    </div>
+  </div>
+
+  <div id="donationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('donationModal')">&times;</span>
+      <h2>Donate</h2>
+      <form onsubmit="donateMoney(event)">
+        <input type="number" id="donationAmount" placeholder="Amount (₹)" required />
+        <button type="submit">Donate</button>
+      </form>
+      <p id="donationResponse"></p>
+    </div>
+  </div>
+  <div class="container section highlight" id="donationHistorySection">
+    <h2>Your Donation History</h2>
+    <ul id="donationHistoryList">
+      <li>No donations yet.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NGO Foundation. All rights reserved.</p>
+    <p>Developed by <strong>suryansh dixit</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

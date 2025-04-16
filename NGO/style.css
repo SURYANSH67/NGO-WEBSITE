@@ -1,0 +1,208 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d89ef;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2d89ef;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #2d89ef;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-buttons button:hover {
+  background-color: #256ec1;
+}
+
+.hero {
+  background: url('https://media.licdn.com/dms/image/v2/D4D12AQGXSoD7D9yi-w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1685390160086?e=2147483647&v=beta&t=zuUS6dEpvdMj3MywhlPJvQYU6MadDx-TX8sZV2iZhEw') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background-color: #e68a00;
+}
+
+.highlight {
+  background-color: #e8f0fe;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.stats-box div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.testimonials blockquote {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid #2d89ef;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #2d89ef;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #256ec1;
+}
+
+/* Footer */
+footer {
+  background-color: #2d89ef;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+#donationHistoryList {
+  margin-top: 20px;
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+#donationHistoryList li {
+  margin: 8px 0;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
