@@ -45,3 +45,9 @@ If you want to contribute to the development of this project:
 	4.	Commit your changes (git commit -m 'Add some feature')
 	5.	Push to the branch (git push origin feature-name)
 	6.	Create a pull request
+
+ Author
+
+Developed by suryansh dixit
+Feel free to contact me via GitHub.
+
